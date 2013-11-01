@@ -1,0 +1,14 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+PRESTASHOP 1.5.6 - Israeli version
+By: AppleEater
+email: bizdev@macho-global.biz
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+This version enables specific Israeli customization:
+- Hebrew language
+- RTL support
+- NIS currency
+- Israel Tax Rules
+- Israel VAT exclusion for Eilat residents
+- Israel Post shipping charges inside Israel
+- Paypal payment
+
