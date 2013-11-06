@@ -130,7 +130,7 @@ a, a:active, a:visited {
 }
 	a:hover {text-decoration:underline}
 
-	
+
 /* HACK IOS ipad, iphone */
 input[type="text"], input[type="email"], input[type="search"], input[type="password"], input[type="submit"], input[type="image"] {
 	-webkit-appearance:none;
@@ -140,7 +140,7 @@ input[type="text"], input[type="email"], input[type="search"], input[type="passw
 	-moz-border-radius:0px !important;
 	border-radius:0px !important;
 }
-	
+
 /*buttons ************************************************************************************** */
 input.button_mini, input.button_small, input.button, input.button_large,
 input.button_mini_disabled, input.button_small_disabled, input.button_disabled, input.button_large_disabled,
@@ -1321,7 +1321,9 @@ a.iframe {font-weight:bold}
 	margin:0;
 	padding:0 0 10px 0
 }
-#new_account_form p.required {color:#222}
+#new_account_form p.required {
+	/* color:#222; not needed, as there's global required class style */
+}
 #new_account_form p.required sup {color:#990000}
 #new_account_form p.radio span,
 #new_account_form p.text label,
@@ -1952,14 +1954,14 @@ div.star_hover a, div.star a:hover { background-position: 0 -12px }
 			color:#333;
 			background:url(../../../modules/blockcategories/img/arrow_right_2.png) no-repeat 10px 10px transparent
 		}
-		
+
 	#categories_block_left  li ul {margin-left:40px}
 		#categories_block_left  li ul li {border:none}
 			#categories_block_left  li ul li a {
 				padding-left:0;
 				background:none
 			}
-		
+
 #categories_block_left li .OPEN,
 #categories_block_left li .CLOSE {
 	display:block;
@@ -1995,7 +1997,7 @@ div.star_hover a, div.star a:hover { background-position: 0 -12px }
     color:#333;
     background:url(../../../modules/blockcms/img/arrow_right_2.png) no-repeat 10px 10px transparent;
 }
-    
+
 tr.subitem > td:first-child + td {
     padding-left: 10px;
 }
@@ -2072,7 +2074,7 @@ tr.subitem > td:first-child + td {
 		background:url(../../../modules/blockrss/img/arrow_right_2.png) no-repeat 10px 10px transparent
 	}
 
-	
+
 /*************** Block SOCIAL ***************/
 #social_block {padding:15px 10px;}
 #social_block li {padding-left:22px !important;}
@@ -2083,12 +2085,12 @@ tr.subitem > td:first-child + td {
 
 /*************** Block STORE ***************/
 .blockstore img { margin: 10px 0 0 0}
-.blockstore p { 
+.blockstore p {
 	padding-bottom:0;
 	font-weight:bold;
 	text-align: right
 }
-.blockstore p.store_image { 
+.blockstore p.store_image {
 	padding-bottom:10px;
 	text-align:center
 }

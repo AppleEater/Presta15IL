@@ -1,2 +1,272 @@
-* { direction: rtl !important; }
-#page { text-align: right !important; }
+/* This CSS is used to align to RTL the PS1.5.6 default theme  */
+
+/* ****************************************************************************
+		Global
+**************************************************************************** */
+
+/* * { direction: rtl !important; } */
+#page {
+	text-align: right !important;
+	direction: rtl;
+}
+
+.error {
+	margin: 0 10px 5px 0 !important;
+}
+
+.error ol {
+	margin-left: 0px !important;
+	margin-right: 20px;
+}
+
+/* ****************************************************************************
+		reset
+**************************************************************************** */
+caption,th{
+	text-align:right !important;
+}
+
+/* ****************************************************************************
+		Header
+**************************************************************************** */
+#header_logo {
+	float:left;
+}
+
+/* ****************************************************************************
+		Footer
+**************************************************************************** */
+#block_contact_infos li pre {
+	direction: rtl;
+}
+
+/* ****************************************************************************
+		grid
+**************************************************************************** */
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9 {
+	position: relative;
+	margin-right: 0px !important;
+	margin-left: 20px;
+}
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+.alpha {margin-right: 0px;}
+.omega {margin-left: 0px;}
+
+/* ************************************************************************************************
+		BLOCKTOPMENU
+************************************************************************************************ */
+/*** ESSENTIAL STYLES ***/
+.sf-right {
+  float: right !important; /* Modified to support RTL */
+}
+.sf-menu li {
+	float:			right !important;  /* Align menu to right */
+}
+.sf-menu li.sfHover ul {
+	right:0 !important; /* added for RTL support */
+	left: auto !important; /* added for RTL support */
+}
+ul.sf-menu li li.sfHover ul {
+	right:10em !important;
+	left:auto !important;
+}
+/*** DEMO SKIN ***/
+.sf-menu {
+	float:right !important; /* supporting RTL menu */
+}
+
+.sf-menu a {
+	border-left:none !important;
+}
+/*** arrows **/
+.sf-menu a.sf-with-ul {
+		padding-left: 	2.25em !important;
+		padding-right:1em !important;
+}
+.sf-sub-indicator {
+	right: auto !important;
+	left: .75em !important; /* Modified to support RTL */
+	background-image:url('modules/blocktopmenu/img/arrows-ffffff-rtl.png') !important;
+}
+
+
+/* ************************************************************************************************
+		PRODUCT PAGE
+************************************************************************************************ */
+#attributes .attribute_list #color_to_pick_list li {
+	float: right !important;
+}
+
+/* BLOCK idTabs ******************************************************************************** */
+ul.idTabs li {
+	float: right !important;
+	margin-left: 0px;
+}
+
+#more_info_sheets .product_desc .product_image{
+	float:right !important;
+	margin-left:auto !important;
+}
+
+#more_info_sheets .product_desc .block_description{
+	float: right !important;
+	margin-left: 0px !important;
+	margin-right: 10px;
+}
+
+
+/* ************************************************************************************************
+		PAGE ADRESSES
+************************************************************************************************ */
+
+#address p.inline-infos {
+	margin:0 0 0 100px !important;
+}
+
+/* ************************************************************************************************
+		CART SUMMARY
+************************************************************************************************ */
+table#cart_summary th {
+        text-align: right !important;
+}
+
+.cart_total_price .total_price_container p {
+	float: right;
+}
+
+.cart_navigation .exclusive {
+	float: left !important;
+}
+
+ul.step li.step_current{
+	float: right;
+}
+
+ul.step li.step_done {
+	float: right;
+}
+
+ul.step li {
+	float: right !important;
+}
+
+#new_account_form p.checkbox input {
+	margin-left: inherit !important;
+	margin-right: 10px;
+}
+/* ************************************************************************************************
+		ACCOUNT CREATION
+************************************************************************************************ */
+.account_creation label {
+	text-align: right !important;
+	direction: rtl;
+	float: right !important;
+}
+
+#new_account_form p.radio label {
+	margin-left: 20px;
+	padding-right: 0px !important;
+}
+
+#attributes .attribute_list input.attribute_radio{
+	float: right !important;
+}
+
+#center_column #new_account_form p {
+	margin-right: 30px;
+}
+
+
+#new_account_form p.text input, #new_account_form p.password input, #new_account_form p.select input {
+	width: 300px !important;
+}
+
+#new_account_form p.radio span, #new_account_form p.text label, #new_account_form p.password label, #new_account_form p.select label, #new_account_form p.select span, #new_account_form p.textarea label {
+	width: 130px !important;
+}
+
+/* ************************************************************************************************
+		Block UserInfo
+************************************************************************************************ */
+#header_user_info a {
+	border-right: 1px solid #000;
+	padding: 3px 5px 0 30px !important;
+	border-left: 0px  !important;
+}
+
+/* ************************************************************************************************
+		Block Special
+************************************************************************************************ */
+#special_block_right p.title_block {
+	text-align: right !important;
+}
+#special_block_right li.product_image {
+	float: right;
+}
+#special_block_right li .s_title_block {
+	text-align: inherit !important;
+}
+
+/* ************************************************************************************************
+		Block Categories
+************************************************************************************************ */
+#categories_block_left li a {
+	background: url(img/arrow_left_2.png) no-repeat 10px 10px transparent !important;
+}
+
+/* ************************************************************************************************
+		Block Suppliers
+************************************************************************************************ */
+.blocksupplier li a {
+	background: url(img/arrow_left_2.png) no-repeat 10px 10px transparent !important;
+}
+
+/* ************************************************************************************************
+		Block Manufacturers
+************************************************************************************************ */
+.blockmanufacturer li a {
+	background: url(img/arrow_left_2.png) no-repeat 10px 10px transparent !important;
+}
+
+/* ************************************************************************************************
+		Block Information
+************************************************************************************************ */
+.informations_block_left li a {
+	background: url(img/arrow_left_2.png) no-repeat 10px 10px transparent !important;
+}
+
+/* ************************************************************************************************
+		Block Viewed
+************************************************************************************************ */
+#viewed-products_block_left .content_img {
+	float: right !important;
+}
+
+/* ************************************************************************************************
+		Block HomeFeatured
+************************************************************************************************ */
+#featured-products_block_center .price {
+	direction: ltr;
+	float: right;
+}
+
+/* ************************************************************************************************
+		Block ReAssurance
+************************************************************************************************ */
+#reinsurance_block li {
+	float: right !important;
+}
+#reinsurance_block li img {
+	float: right !important;
+}
