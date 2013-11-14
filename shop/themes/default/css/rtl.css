@@ -270,3 +270,11 @@ ul.step li {
 #reinsurance_block li img {
 	float: right !important;
 }
+
+/* ************************************************************************************************
+		Block Image Slider
+************************************************************************************************ */
+.bx-window {
+	margin-bottom: 20px;
+	direction: ltr !important;
+}
