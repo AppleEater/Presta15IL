@@ -11,6 +11,6 @@ $_MODULE['<{blockcontact}default>blockcontact_b17f3f4dcf653a5776792498a9b44d6a']
 $_MODULE['<{blockcontact}default>blockcontact_02d4482d332e1aef3437cd61c9bcc624'] = 'צור קשר';
 $_MODULE['<{blockcontact}default>blockcontact_75858d311c84e7ba706b69bea5c71d36'] = 'המוקד שלנו זמין 24/7';
 $_MODULE['<{blockcontact}default>blockcontact_673ae02fffb72f0fe68a66f096a01347'] = 'טלפון:';
-$_MODULE['<{blockcontact}default>blockcontact_736c5a7e834b7021bfa97180fc453115'] = 'התקשר לקו החם';
-$_MODULE['<{blockcontact}default>blockcontact_8b1f7be76996ad6911a17592b9804e1b'] = 'המוקד שלנו זמין 24/7';
-$_MODULE['<{blockcontact}default>blockcontact_e6d0e56415c30a59658fb34ef5d7be35'] = 'התקשר לקו החם';
+$_MODULE['<{blockcontact}default>blockcontact_736c5a7e834b7021bfa97180fc453115'] = 'צור קשר עם שירות הלקוחות שלנו!';
+$_MODULE['<{blockcontact}default>blockcontact_8b1f7be76996ad6911a17592b9804e1b'] = 'עומדים לרשותך בכל שעות היום';
+$_MODULE['<{blockcontact}default>blockcontact_e6d0e56415c30a59658fb34ef5d7be35'] = 'שלח מייל';

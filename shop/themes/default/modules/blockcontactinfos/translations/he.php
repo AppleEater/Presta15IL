@@ -4,7 +4,7 @@ global $_MODULE;
 $_MODULE = array();
 $_MODULE['<{blockcontactinfos}default>blockcontactinfos_632535e0cdfd3380906f6b7d40ba78d3'] = 'בלוק נתוני קשר';
 $_MODULE['<{blockcontactinfos}default>blockcontactinfos_86458ae1631be34a6fcbf1a4584f5abe'] = 'הוסף בלוק להוספת מידע על לקוחות וחנות';
-$_MODULE['<{blockcontactinfos}default>blockcontactinfos_20015706a8cbd457cbb6ea3e7d5dc9b3'] = 'תצורה מתעדכנת';
+$_MODULE['<{blockcontactinfos}default>blockcontactinfos_20015706a8cbd457cbb6ea3e7d5dc9b3'] = 'תצורה עודכנה';
 $_MODULE['<{blockcontactinfos}default>blockcontactinfos_c281f92b77ba329f692077d23636f5c9'] = 'שם החברה:';
 $_MODULE['<{blockcontactinfos}default>blockcontactinfos_dd7bf230fde8d4836917806aff6a6b27'] = 'כתובת';
 $_MODULE['<{blockcontactinfos}default>blockcontactinfos_1f8261d17452a959e013666c5df45e07'] = 'טלפון';

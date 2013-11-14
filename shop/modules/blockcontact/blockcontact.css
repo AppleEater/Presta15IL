@@ -26,7 +26,7 @@
 	margin-left:60px;
 	padding:6px 8px;
 	font:bold 10px Arial,Verdana,sans-serif;
-	color:#fff;
+/*	color:#fff;  use default color settings */
 	text-shadow:0 -1px 0 #000;
 	text-transform:uppercase;
 	-moz-border-radius:3px;
