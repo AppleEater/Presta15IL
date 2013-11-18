@@ -1,9 +1,9 @@
 div.addresses {
-   position:relative;
-   padding:15px;
-   border:1px solid #ccc;
+	position:relative;
+	padding:15px;
+	border:1px solid #ccc;
 	font-size:12px;
-   background:#f8f8f8
+/*	background:#f8f8f8  confort to global color settings */
 }
 
 ul.address {

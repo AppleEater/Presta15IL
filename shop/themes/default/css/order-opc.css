@@ -10,7 +10,7 @@
 #new_account_form  fieldset {
 		padding:0 0 15px 0;
 		border:1px solid #ccc;
-		background:#f8f8f8
+/*		background:#f8f8f8 comforts to the global color settings */
 }
 #new_account_form  h3 {
 	margin:0 0 15px 0;

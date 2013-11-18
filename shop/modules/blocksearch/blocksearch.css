@@ -27,7 +27,11 @@
 }
 
 form#searchbox{padding-top:5px}
-form#searchbox label{color:#333;margin-bottom:1px}
+form#searchbox label{
+/*	color:#333;  */
+	margin-bottom:1px;
+	display: block;
+}
 form#searchbox input#search_query_block{
 	border: 1px solid #CCCCCC;
 	-webkit-border-radius:3px !important;
@@ -36,5 +40,7 @@ form#searchbox input#search_query_block{
     height: 18px;
 	margin-top:10px;
 }
-form#searchbox input#search_button{padding: 1px 4px;}
+form#searchbox input#search_button{
+/*	padding: 1px 4px; */
+}
 

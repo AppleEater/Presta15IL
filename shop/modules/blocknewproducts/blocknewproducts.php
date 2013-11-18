@@ -33,21 +33,28 @@ class BlockNewProducts extends Module
 	{
 		$this->name = 'blocknewproducts';
 		$this->tab = 'front_office_features';
-		$this->version = '1.4';
+		$this->version = '1.4.2';
 		$this->author = 'PrestaShop';
 		$this->need_instance = 0;
+    	$this->ps_versions_compliancy = array('min' => '1.5', 'max' => '1.6');
 
 		parent::__construct();
 
 		$this->displayName = $this->l('New products block');
-		$this->description = $this->l('Displays a block featuring your store\'s newest products.');
+		$this->description = $this->l('Displays a block featuring your store\'s newest products. Upgraded by MachoG');
 	}
 
 	public function install()
 	{
+		if (Shop::isFeatureActive())  //checks whether the multistore feature is active or not, and if at least two stores are presently activated.
+			Shop::setContext(Shop::CONTEXT_ALL);   //changes the context in order  to apply coming changes to all existing stores instead of only the current store.
+
 		if (!parent::install()
-			|| !$this->registerHook('rightColumn')
-			|| !$this->registerHook('header')
+			|| !$this->registerHook('displayHeader')
+			|| !$this->registerHook('displayRightColumn')
+			|| !$this->registerHook('displayLeftColumn')
+			|| !$this->registerHook('displayHome')
+			|| !$this->registerHook('displayFooter')
 			|| !$this->registerHook('addproduct')
 			|| !$this->registerHook('updateproduct')
 			|| !$this->registerHook('deleteproduct')
@@ -57,11 +64,15 @@ class BlockNewProducts extends Module
 		$this->_clearCache('blocknewproducts.tpl');
 		return true;
 	}
-	
+
 	public function uninstall()
 	{
-		$this->_clearCache('blocknewproducts.tpl');
-		return parent::uninstall();
+		return (
+			parent::uninstall() &&
+		$this->_clearCache('blocknewproducts.tpl') &&
+		Configuration::deleteByName('NEW_PRODUCTS_NBR') &&
+		Configuration::deleteByName('PS_BLOCK_NEWPRODUCTS_DISPLAY')
+		);
 	}
 
 	public function getContent()
@@ -70,14 +81,14 @@ class BlockNewProducts extends Module
 		if (Tools::isSubmit('submitBlockNewProducts'))
 		{
 			if (!($productNbr = Tools::getValue('productNbr')) || empty($productNbr))
-				$output .= '<div class="alert error">'.$this->l('Please complete the "products to display" field.').'</div>';
+				$output .= $this->displayError($this->l('Please complete the "products to display" field.'));
 			elseif ((int)($productNbr) == 0)
-				$output .= '<div class="alert error">'.$this->l('Invalid number.').'</div>';
+				$output .= $this->displayError($this->l('Invalid number.'));
 			else
 			{
 				Configuration::updateValue('PS_BLOCK_NEWPRODUCTS_DISPLAY', (int)(Tools::getValue('always_display')));
 				Configuration::updateValue('NEW_PRODUCTS_NBR', (int)($productNbr));
-				$output .= '<div class="conf confirm">'.$this->l('Settings updated').'</div>';
+				$output .=	$this->displayConfirmation($this->l('Settings updated'));
 			}
 		}
 		return $output.$this->displayForm();
@@ -107,9 +118,9 @@ class BlockNewProducts extends Module
 		return $output;
 	}
 
-	public function hookRightColumn($params)
+	public function hookDisplayRightColumn($params)
 	{
-		if (!$this->isCached('blocknewproducts.tpl', $this->getCacheId()))
+		if (!$this->isCached('blocknewproducts-right.tpl', $this->getCacheId('blocknewproducts-right')))
 		{
 			if (!Configuration::get('PS_BLOCK_NEWPRODUCTS_DISPLAY'))
 				return;
@@ -122,41 +133,60 @@ class BlockNewProducts extends Module
 				'mediumSize' => Image::getSize(ImageType::getFormatedName('medium')),
 			));
 		}
-		return $this->display(__FILE__, 'blocknewproducts.tpl', $this->getCacheId());
+		return $this->display(__FILE__, 'blocknewproducts-right.tpl', $this->getCacheId('blocknewproducts-right'));
 	}
 
-	protected function getCacheId($name = null)
+	public function hookDisplayLeftColumn($params)
 	{
-		return parent::getCacheId('blocknewproducts|'.date('Ymd'));
+		return $this->hookDisplayRightColumn($params);
 	}
 
-	public function hookLeftColumn($params)
+
+	public function hookDisplayHome($params)
 	{
-		return $this->hookRightColumn($params);
-	}
-	
-	public function hookHome($params)
-	{
-		return $this->hookRightColumn($params);
+		if (!$this->isCached('blocknewproducts-home.tpl', $this->getCacheId('blocknewproducts-home')))
+		{
+			if (!Configuration::get('PS_BLOCK_NEWPRODUCTS_DISPLAY'))
+				return;
+			$np_nbr = (int)Configuration::get('NEW_PRODUCTS_NBR');
+            $productClass = new Product();
+			$newProducts = $productClass -> getNewProducts((int)Context::getContext()->language->id, 0, ($np_nbr ? $np_nbr : 2));
+			if (!$newProducts)
+				return;
+
+			$this->smarty->assign(array(
+				'new_products' => $newProducts,
+				'homeSize' => Image::getSize(ImageType::getFormatedName('home')),
+			));
+		}
+		return $this->display(__FILE__, 'blocknewproducts-home.tpl', $this->getCacheId('blocknewproducts-home'));
 	}
 
-	public function hookHeader($params)
+	public function hookDisplayFooter($params)
 	{
-		$this->context->controller->addCSS(($this->_path).'blocknewproducts.css', 'all');
+		return $this->hookDisplayRightColumn($params);
+	}
+
+	public function hookDisplayHeader($params)
+	{
+		$this->context->controller->addCSS(($this->_path).'views/css/blocknewproducts.css', 'all');
 	}
 
 	public function hookAddProduct($params)
 	{
-		$this->_clearCache('blocknewproducts.tpl');
+		$this->_clearCache('blocknewproducts-home.tpl');
+		$this->_clearCache('blocknewproducts-right.tpl');
 	}
 
 	public function hookUpdateProduct($params)
 	{
-		$this->_clearCache('blocknewproducts.tpl');
+		$this->_clearCache('blocknewproducts-home.tpl');
+		$this->_clearCache('blocknewproducts-right.tpl');
 	}
 
 	public function hookDeleteProduct($params)
 	{
-		$this->_clearCache('blocknewproducts.tpl');
+		$this->_clearCache('blocknewproducts-home.tpl');
+		$this->_clearCache('blocknewproducts-right.tpl');
 	}
 }

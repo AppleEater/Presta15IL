@@ -21,7 +21,7 @@
 #shopping_cart a{
 	height: 15px;
 	padding:15px 27px 10px 43px;
-	background: url('img/icon/cart.gif') no-repeat 10px 9px #eee;
+	background: url('img/icon/cart.gif') no-repeat 10px 9px;
 	min-width: 130px;/* 200 */
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
@@ -35,7 +35,7 @@
 #header_user #your_account {display:none;}
 #header_user #your_account a { background-image: url('img/icon/my-account.gif') }
 
-/* user infos */ 
+/* user infos */
 #header_user_info {
 	clear:both;
 	float:right;

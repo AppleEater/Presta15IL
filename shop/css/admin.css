@@ -437,6 +437,10 @@ select optgroup option {
 	background-color: #FFE6E6;
 }
 
+.alert {
+	color: red;
+}
+
 #content .warning {
 	margin: 0 0 15px 0;
 	line-height: 20px;
@@ -556,7 +560,7 @@ select optgroup option {
 	border: 1px solid #4F8A10;
 	color:#4F8A10;
 	border-radius:3px;
-	
+
 }
 
 
@@ -2420,7 +2424,7 @@ margin-bottom:7px;
   display:block;
   position: relative;
   margin: 0;
-  padding:0;       
+  padding:0;
   overflow:hidden;
   clear:both;
 }
@@ -2430,20 +2434,20 @@ margin-bottom:7px;
   position: absolute;
   float:left;
   margin: 0;
-  padding: 0;  
+  padding: 0;
   text-align:left;
-  overflow:visible;    
-  z-index:88; 
+  overflow:visible;
+  z-index:88;
   clear:both;
 }
 #carrier_wizard.swMain div.actionBar {
   display:block;
-  position: relative; 
-  clear:both;  
-  padding: 0;    
+  position: relative;
+  clear:both;
+  padding: 0;
   text-align:left;
-  overflow:auto;    
-  z-index:88; 
+  overflow:auto;
+  z-index:88;
 	background-color: #f7f8f7;
 	border: 1px solid #caccca;
 	height: 37px;
@@ -2455,10 +2459,10 @@ margin-bottom:7px;
   margin:0;
   padding:5px;
   clear:both;
-  text-align:left; 
+  text-align:left;
   z-index:88;
   -webkit-border-radius: 5px;
-  -moz-border-radius  : 5px;    
+  -moz-border-radius  : 5px;
 }
 #carrier_wizard.swMain ul.anchor {
   position: relative;
@@ -2471,17 +2475,17 @@ margin-bottom:7px;
   width: 100%;
 }
 
-#carrier_wizard.swMain ul.anchor li{ 
-  position: relative; 
+#carrier_wizard.swMain ul.anchor li{
+  position: relative;
   display:block;
   margin: 0;
-  padding: 0;  
+  padding: 0;
   float: left;
 }
-#carrier_wizard.swMain ul.nbr_steps_4.anchor li{ 
+#carrier_wizard.swMain ul.nbr_steps_4.anchor li{
   width: 25%;
 }
-#carrier_wizard.swMain ul.nbr_steps_5.anchor li{ 
+#carrier_wizard.swMain ul.nbr_steps_5.anchor li{
   width: 20%;
 }
 #carrier_wizard.swMain ul.anchor li a {
@@ -2527,7 +2531,7 @@ margin-bottom:7px;
 #carrier_wizard.swMain ul.anchor li a.done,
 #carrier_wizard.swMain ul.anchor li.done.selected a.selected {
   position:relative;
-  color:#FFF;  
+  color:#FFF;
   background: url(../img/admin/steps-carrierwizard.png) right 0 no-repeat #3f4856;
   z-index:99;
 }
@@ -2548,14 +2552,14 @@ margin-bottom:7px;
   outline-style:none;
   background-color:   #5A5655;
   border: 1px solid #5A5655;
-  -moz-border-radius  : 5px; 
-  -webkit-border-radius: 5px;    
+  -moz-border-radius  : 5px;
+  -webkit-border-radius: 5px;
 }
 #carrier_wizard.swMain .buttonDisabled {
   color:#F8F8F8  !important;
   background-color: #CCCCCC !important;
   border: 1px solid #CCCCCC  !important;
-  cursor:text;    
+  cursor:text;
 }
 #carrier_wizard.swMain .buttonPrevious {
   display:block;
@@ -2569,8 +2573,8 @@ margin-bottom:7px;
   outline-style:none;
   background-color:   #5A5655;
   border: 1px solid #5A5655;
-  -moz-border-radius  : 5px; 
-  -webkit-border-radius: 5px;    
+  -moz-border-radius  : 5px;
+  -webkit-border-radius: 5px;
 }
 #carrier_wizard.swMain .buttonFinish {
   display:block;
@@ -2584,8 +2588,8 @@ margin-bottom:7px;
   outline-style:none;
   background-color:   #5A5655;
   border: 1px solid #5A5655;
-  -moz-border-radius  : 5px; 
-  -webkit-border-radius: 5px;    
+  -moz-border-radius  : 5px;
+  -webkit-border-radius: 5px;
 }
 #carrier_logo_block{
 	position: absolute;
@@ -2594,18 +2598,18 @@ margin-bottom:7px;
 	margin: 0;
 }
 #carrier_wizard.swMain .msgBox {
-  position:relative;  
+  position:relative;
   display:none;
   float:left;
   margin: 4px 0 0 5px;
   padding:5px;
-  border: 1px solid #FFD700; 
-  background-color: #FFFFDD;  
-  color:#5A5655;         
+  border: 1px solid #FFD700;
+  background-color: #FFFFDD;
+  color:#5A5655;
   -moz-border-radius  : 5px;
   -webkit-border-radius: 5px;
   z-index:999;
-  min-width:200px;  
+  min-width:200px;
 }
 #carrier_wizard.swMain .msgBox .content {
   padding: 0px;
@@ -2647,17 +2651,17 @@ margin-bottom:7px;
 #carrier_wizard .assoShop { min-height:  inherit}
 
 /*** IE10 ***/
-/*@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+/*@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
 	#carrier_wizard.swMain ul.anchor li a{padding: 3px 19px 3px 19px;}
 	#carrier_wizard.swMain ul.anchor li{padding-right: 60px;}
 	#carrier_wizard.swMain ul.nbr_steps_3 li{ min-width: 30%;}
 	#carrier_wizard.swMain ul.nbr_steps_4 li{ min-width: 21.7%;}
 	#carrier_wizard.swMain ul.nbr_steps_5 li{ min-width: 16.7%;}
-	
+
 }
-.ie9 #carrier_wizard.swMain ul.anchor li a, 
+.ie9 #carrier_wizard.swMain ul.anchor li a,
 .ie8 #carrier_wizard.swMain ul.anchor li a{padding: 3px 19px 3px 19px;}
-.ie9 #carrier_wizard.swMain ul.anchor li, 
+.ie9 #carrier_wizard.swMain ul.anchor li,
 .ie8 #carrier_wizard.swMain ul.anchor li,
 .ie7 #carrier_wizard.swMain ul.anchor li{padding-right: 60px;}
 .ie7 #carrier_wizard.swMain ul.anchor li a{padding: 3px 19px 3px 19px;}

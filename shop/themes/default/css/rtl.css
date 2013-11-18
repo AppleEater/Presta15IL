@@ -142,6 +142,11 @@ ul.idTabs li {
 	margin:0 0 0 100px !important;
 }
 
+.addressesAreEquals input {
+	float: right !important;
+	margin-left: 5px;
+}
+
 /* ************************************************************************************************
 		CART SUMMARY
 ************************************************************************************************ */
@@ -285,4 +290,22 @@ ul.step li {
 .bx-window {
 	margin-bottom: 20px;
 	direction: ltr !important;
+}
+/* ************************************************************************************************
+		Block HomeCategories
+************************************************************************************************ */
+div.home_categories ul {
+	text-align: right !important;
+	float: right !important;
+}
+
+div.home_categories li {
+	float: right !important;
+}
+
+/* ************************************************************************************************
+		Block Products
+************************************************************************************************ */
+#products_block li {
+	float: right !important;
 }
