@@ -183,9 +183,9 @@ input.button_mini_disabled, input.button_small_disabled, input.button_disabled, 
 input.exclusive_mini_disabled, input.exclusive_small_disabled, input.exclusive_disabled, input.exclusive_large_disabled,
 span.button_mini, span.button_small, span.button, span.button_large,
 span.exclusive_mini, span.exclusive_small, span.exclusive, span.exclusive_large, span.exclusive_large_disabled {
-	/*background-position: left -36px;
+/*	background-position: left -36px;
 	cursor: default;
-	color: #888!important*/
+	color: #888 !important; */
 }
 
 /* exclusive button */
@@ -193,12 +193,12 @@ input.exclusive_mini, input.exclusive_small, input.exclusive, input.exclusive_la
 input.exclusive_mini_disabled, input.exclusive_small_disabled, input.exclusive_disabled, input.exclusive_large_disabled,
 a.exclusive_mini, a.exclusive_small, a.exclusive, a.exclusive_large,
 span.exclusive_mini, span.exclusive_small, span.exclusive, span.exclusive_large, span.exclusive_large_disabled {
-	/*color: white!important*/
+/*	color: white !important;  */
 }
 
 /* exclusive disabled button */
 input.exclusive_mini_disabled, input.exclusive_small_disabled, input.exclusive_disabled, input.exclusive_large_disabled, span.exclusive_mini, span.exclusive_small, span.exclusive, span.exclusive_large {
-	/*color: #488c40!important*/
+/*	color: #488c40 !important;*/
 }
 
 /* hover button */
@@ -292,7 +292,7 @@ table.table_block  td {
 	.block .title_block, .block h4 {
 		padding:6px 11px;
 		font-size:12px;
-		color: purple;
+/*		color: purple; */
 		text-shadow:0 1px 0 #000;
 		text-transform:uppercase;
 		background: chartreuse;
@@ -379,7 +379,7 @@ ul.footer_links li .icon {
 	padding:0 10px;
 }
 
-.sortPagiBar #nb_item {border:1px solid #ccc}
+.sortPagiBar #nb_item {border:1px solid #ccc;}
 
 /* pagination ********************************************************************************** */
 form.pagination {display:none;}
@@ -406,19 +406,19 @@ ul.pagination a {
 }
 ul.pagination a:hover {
 /*	color:#333; */
-	border:1px solid #333
+	border:1px solid #333;
 }
 ul.pagination .current span {
 /*	color:#000; */
 	border:1px solid #fff;
 }
-ul.pagination li.disabled span {color:#ccc}
+ul.pagination li.disabled span {color:#ccc;}
 
-#pagination_previous, .pagination_previous {float:left}
-#pagination_next, .pagination_next {float:right}
+#pagination_previous, .pagination_previous {float:left;}
+#pagination_next, .pagination_next {float:right;}
 
 .ie7 #pagination_previous, .ie7 .pagination_previous,
-.ie7 #pagination_next, .ie7 .pagination_next {float:none}
+.ie7 #pagination_next, .ie7 .pagination_next {float:none;}
 
 ul.pagination .pagination_previous a,ul.pagination .pagination_previous span,
 ul.pagination .pagination_next a, ul.pagination .pagination_next span {
@@ -953,12 +953,12 @@ table#cart_summary .gift-icon {
 
 #authentication #create-account_form fieldset,
 #authentication #login_form fieldset {
-	min-height: 200px
+	min-height: 180px;
 }
 
 #authentication #create-account_form .form_content,
 #authentication #login_form .form_content {
-	padding:15px 10px
+	padding:15px 10px;
 }
 
 #create-account_form h3,
@@ -969,12 +969,12 @@ table#cart_summary .gift-icon {
 	font-size:12px;
 	color:#fff;
 	text-transform:uppercase;
-	background:url(../img/bg_form_h3.png) repeat-x 0 0 #989898
+	background:url(../img/bg_form_h3.png) repeat-x 0 0 #989898;
 }
 #create-account_form .title_block  {
 	padding-bottom:22px;
 	font-size:11px;
-	color:#333;
+/*	color:#333; */
 }
 
 #create-account_form label,

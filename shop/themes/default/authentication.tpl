@@ -164,7 +164,7 @@ $(document).ready(function() {
 				<div class="error" id="create_account_error" style="display:none"></div>
 				<p class="text">
 					<label for="email_create">{l s='Email address'}</label>
-					<span><input type="text" id="email_create" name="email_create" value="{if isset($smarty.post.email_create)}{$smarty.post.email_create|stripslashes}{/if}" class="account_input" /></span>
+					<span><input type="email" id="email_create" name="email_create" value="{if isset($smarty.post.email_create)}{$smarty.post.email_create|stripslashes}{/if}" class="account_input" /></span>
 				</p>
 				<p class="submit">
 					{if isset($back)}<input type="hidden" class="hidden" name="back" value="{$back|escape:'htmlall':'UTF-8'}" />{/if}
@@ -181,7 +181,7 @@ $(document).ready(function() {
 			<div class="form_content clearfix">
 				<p class="text">
 					<label for="email">{l s='Email address'}</label>
-					<span><input type="text" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email|stripslashes}{/if}" class="account_input" /></span>
+					<span><input type="email" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email|stripslashes}{/if}" class="account_input" /></span>
 				</p>
 				<p class="text">
 					<label for="passwd">{l s='Password'}</label>
@@ -204,7 +204,7 @@ $(document).ready(function() {
 				<!-- Account -->
 				<p class="required text">
 					<label for="guest_email">{l s='Email address'} <sup>*</sup></label>
-					<input type="text" class="text" id="guest_email" name="guest_email" value="{if isset($smarty.post.guest_email)}{$smarty.post.guest_email}{/if}" />
+					<input type="email" class="text" id="guest_email" name="guest_email" value="{if isset($smarty.post.guest_email)}{$smarty.post.guest_email}{/if}" />
 				</p>
 				<p class="radio required">
 					<span>{l s='Title'}</span>
@@ -397,7 +397,7 @@ $(document).ready(function() {
 		</p>
 		<p class="required text">
 			<label for="email">{l s='Email'} <sup>*</sup></label>
-			<input type="text" class="text" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email}{/if}" />
+			<input type="email" class="text" id="email" name="email" value="{if isset($smarty.post.email)}{$smarty.post.email}{/if}" />
 		</p>
 		<p class="required password">
 			<label for="passwd">{l s='Password'} <sup>*</sup></label>

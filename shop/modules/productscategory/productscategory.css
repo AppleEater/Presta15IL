@@ -3,7 +3,7 @@ h2.productscategory_h2 {
 	padding:10px 0;
 	border-bottom:1px solid #ccc;
 	font-size:18px;
-	color:#333
+/*	color:#333; unified color scheme  */
 }
 
 #productscategory {overflow:auto}

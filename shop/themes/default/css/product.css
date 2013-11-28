@@ -145,7 +145,7 @@ span.view_scroll_spacer {
 }
 
 #pb-left-column #short_description_block {
-	color:#666;
+/*	color:#666; */
 }
 
 #pb-left-column #short_description_block .buttons_bottom_block {
@@ -254,7 +254,7 @@ span.view_scroll_spacer {
 	min-width: 255px;
 }
 
-#availability_statut span#availability_label, 
+#availability_statut span#availability_label,
 #availability_date_label {
 	display:inline-block;
 	width:125px;
@@ -347,7 +347,7 @@ span.view_scroll_spacer {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) { /*hack Chrome and Safari */
- 
+
     .content_prices #add_to_cart .exclusive,.content_prices #add_to_cart .exclusive_disabled {
 		padding:6px 7px 4px 15px;
 	}

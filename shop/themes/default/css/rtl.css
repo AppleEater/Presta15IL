@@ -27,6 +27,13 @@ caption,th{
 }
 
 /* ****************************************************************************
+		MAINTENANCE
+**************************************************************************** */
+#maintenance #message {
+	direction: rtl;
+}
+
+/* ****************************************************************************
 		Header
 **************************************************************************** */
 #header_logo {
@@ -105,7 +112,7 @@ ul.sf-menu li li.sfHover ul {
 .sf-sub-indicator {
 	right: auto !important;
 	left: .75em !important; /* Modified to support RTL */
-	background-image:url('modules/blocktopmenu/img/arrows-ffffff-rtl.png') !important;
+	background-image:url('img/arrows-ffffff-rtl.png') !important;
 }
 
 
@@ -132,6 +139,32 @@ ul.idTabs li {
 	margin-left: 0px !important;
 	margin-right: 10px;
 }
+
+#pb-right-column {
+	float: right !important;
+}
+
+/* ************************************************************************************************
+		CATEGORY PAGE
+************************************************************************************************ */
+/*** Products list ****/
+#product_list li .left_block {
+	float: right !important;
+}
+
+#product_list li .center_block {
+	float: right !important;
+}
+#product_list a.product_img_link {
+	float: right !important;
+}
+#product_list li .lnk_view {
+	background: url(img/arrow_left_1.png) no-repeat 70% 4px transparent !important;
+}
+
+/* ************************************************************************************************
+      SUB CATEGORIES
+************************************************************************************************ */
 
 
 /* ************************************************************************************************
@@ -270,7 +303,7 @@ ul.step li {
 		Block HomeFeatured
 ************************************************************************************************ */
 #featured-products_block_center .price {
-	direction: ltr;
+	direction: rtl;
 	float: right;
 }
 
@@ -308,4 +341,11 @@ div.home_categories li {
 ************************************************************************************************ */
 #products_block li {
 	float: right !important;
+}
+
+/* ************************************************************************************************
+		Module Products Category
+************************************************************************************************ */
+#productscategory_list ul {
+	float: right;
 }

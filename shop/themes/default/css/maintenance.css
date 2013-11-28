@@ -2,7 +2,7 @@
 	margin:0 auto;
 	width:940px;
 	font:normal 30px Arial, Verdana, sans-serif;
-	color:#333;
+/*	color:#333; commented for color continuity */
 }
 #maintenance #message {
 	margin:0 20px;

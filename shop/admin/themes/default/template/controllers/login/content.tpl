@@ -28,7 +28,7 @@
 				var label_errors = '{l s='errors'}';
 				var label_error = '{l s='error'}';
 			</script>
-			<div id="container">	
+			<div id="container">
 				<div id="error" {if !isset($errors)}class="hide"{/if}>
 {if isset($errors)}
 					<h3>{if $nbErrors > 1}{l s='There are %d errors.' sprintf=$nbErrors}{else}{l s='There is %d error.' sprintf=$nbErrors}{/if}</h3>
@@ -50,35 +50,35 @@
 							<div class="field">
 								<label for="email">{l s='Email address:'}</label>
 								<input type="text" id="email" name="email" class="input email_field" tabindex="1" value="{if isset($email)}{$email|escape:'htmlall':'UTF-8'}{/if}" />
-							</div>					
+							</div>
 							<div class="field">
 								<label for="passwd">{l s='Password:'}</label>
 								<input id="passwd" type="password" name="passwd" class="input password_field" tabindex="2" value="{if isset($password)}{$password}{/if}"/>
-							</div>					
+							</div>
 							<div class="field">
-								<input type="submit" name="submitLogin" value="{l s='Log in'}" tabindex="3" class="button fl margin-right-5" />					
+								<input type="submit" name="submitLogin" value="{l s='Log in'}" tabindex="3" class="button fl margin-right-5" />
 								<p class="fl no-margin hide ajax-loader">
 									<img src="../img/loader.gif" alt="" />
-								</p>					
+								</p>
 								<p class="fr no-margin">
 									<a href="#" class="show-forgot-password">{l s='Lost password?'}</a>
 								</p>
 								<div class="clear"></div>
 							</div>
 							<input type="hidden" name="redirect" id="redirect" value="{$redirect}"/>
-						</form>					
+						</form>
 						<form action="#" id="forgot_password_form" method="post" class="hide">
 							<h2 class="no-margin">{l s='Forgot your password?'}</h2>
-							<p class="bold">{l s='In order to receive your access code by email, please enter the address you provided during the registration process.'}</p>					
+							<p class="bold">{l s='In order to receive your access code by email, please enter the address you provided during the registration process.'}</p>
 							<div class="field">
 								<label>{l s='Email address:'}</label>
-								<input type="text" name="email_forgot" id="email_forgot" class="input email_field" />
-							</div>					
+								<input type="email" name="email_forgot" id="email_forgot" class="input email_field" />
+							</div>
 							<div class="field">
-								<input type="submit" name="submit" value="{l s='Send'}" class="button fl margin-right-5" />					
+								<input type="submit" name="submit" value="{l s='Send'}" class="button fl margin-right-5" />
 								<p class="fl no-margin hide ajax-loader">
 									<img src="../img/loader.gif" alt=""  />
-								</p>					
+								</p>
 								<p class="fr no-margin">
 									<a href="#" class="show-login-form">{l s='Back to login'}</a>
 								</p>

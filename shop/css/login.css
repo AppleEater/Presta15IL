@@ -10,7 +10,7 @@ body {
 }
 
 h1 {
-	color: #902F52;
+/*	color: #902F52; */
 	font-size: 20pt;
 	padding: 15px 10px 10px 30px;
 	margin: 0;
@@ -72,8 +72,9 @@ input:focus, textarea:focus {
 
 #login h1 {
 	border-bottom:1px solid #ccc;
-	color:#333;
+/*	color:#333; */
 	text-shadow:0 1px 0 #fff;
+	text-align: center;
 }
 
 #login a { color:#3A6EA7; }
@@ -133,13 +134,16 @@ input:focus, textarea:focus {
 	width: 365px;
 	margin:0;
 	padding: 6px 4px 6px 35px;
+	text-align: left;
 }
 
-.email_field { background: #fff url(../img/admin/bg_form_email.png) no-repeat scroll 10px 8px; }
+.email_field {
+	background: #fff url(../img/admin/bg_form_email.png) no-repeat scroll 10px 8px;
+}
 .password_field { background: #fff url(../img/admin/bg_form_password.png) no-repeat scroll 10px 8px; }
 
 .button {
-	background: -moz-linear-gradient(center top , #F9F9F9, #E3E3E3) repeat scroll 0 0 transparent; 
+	background: -moz-linear-gradient(center top , #F9F9F9, #E3E3E3) repeat scroll 0 0 transparent;
 	background: -webkit-gradient(linear, center top ,center bottom, from(#F9F9F9), to(#E3E3E3)) repeat scroll 0 0 transparent;
 	border-color: #CCCCCC #BBBBBB #A0A0A0;
 	border-left: 1px solid #BBBBBB;
